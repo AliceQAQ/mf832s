@@ -1,0 +1,6 @@
+send "AT+ZGACT=0,1"
+
+expect {
+	"OK" break
+}
+! killall -9 minicom

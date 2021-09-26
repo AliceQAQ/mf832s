@@ -1,0 +1,16 @@
+send "AT+CGDCONT=1,\"IP\""
+send "AT+CFUN=1"
+send "AT+CEREG=1"
+send "AT+CGREG?"
+send "AT+CEREG?"
+send "AT+ZGACT=1,1"
+send "AT+CGPADDR=1"
+
+expect {
+	"OK" break
+	timeout 3 goto exitt
+}
+
+goto exitt
+exitt:
+	! killall -9 minicom
