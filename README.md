@@ -43,7 +43,7 @@ sudo minicom -s
 
 ```bash
 git clone https://github.com/AliceQAQ/mf832s
-cd mfs832s
+cd mf832s
 #注意，此处可能需要多次执行这个命令
 sudo minicom -S modemconnect
 ```
